@@ -1,0 +1,24 @@
+# Define a class to store student information
+class Student:
+    # Initialize the attributes of the class
+    def __init__(self, reg_no, m1, m2, m3):
+        self.reg_no = reg_no # Registration number
+        self.m1 = m1 # Grade in subject 1
+        self.m2 = m2 # Grade in subject 2
+        self.m3 = m3 # Grade in subject 3
+
+    # Define a method to calculate the average grade
+    def average_grade(self):
+        return (self.m1 + self.m2 + self.m3) / 3
+
+    # Define a method to display the student information
+    def display(self):
+        print(f"Registration number: {self.reg_no}")
+        print(f"Grades: {self.m1}, {self.m2}, {self.m3}")
+        print(f"Average grade: {self.average_grade():.2f}")
+
+# Create an instance of the class with some sample data
+student = Student("2020CS001", 85, 90, 95)
+
+# Call the display method to show the student information
+student.display()
